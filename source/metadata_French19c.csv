@@ -1,0 +1,39 @@
+idno	author	author-gender	title	year	decade	subgenre	language	brow	cligs-id	notes
+Flaubert_Education.txt	Flaubert	male	Education	1869	1860s	blanche	fr	high	rd0041.txt	
+Flaubert_MadameBovary.txt	Flaubert	male	MadameBovary	1857	1850s	blanche	fr	high	rd0040.txt	
+Flaubert_Sallambo.txt	Flaubert	male	Sallambo	1862	1860s	blanche	fr	high	rd0042.txt	
+France_CrimeSylvestreBonnard.txt	France	male	CrimeSylvestreBonnard	1881	1880s	blanche	fr	high		Nobel
+France_MannequinOsier.txt	France	male	MannequinOsier	1897	1890s	histoire	fr	high		Nobel
+France_Thais.txt	France	male	Thais	1890	1890s	blanche	fr	high		Nobel
+Huysmans_ARebours.txt	Huysmans	male	ARebours	1884	1880s		fr	high		
+Huysmans_SœursVatard.txt	Huysmans	male	SœursVatard	1879	1870s		fr	high		
+Maupassant_BelAmi.txt	Maupassant	male	BelAmi	1885	1880s	blanche	fr	high	rd0052.txt	
+Maupassant_PierreJean.txt	Maupassant	male	PierreJean	1888	1880s	blanche	fr	high	rd0055.txt	
+Maupassant_UneVie.txt	Maupassant	male	UneVie	1883	1880s	blanche	fr	high	rd0056.txt	
+Mirbeau_AbbeJules.txt	Mirbeau	male	AbbeJules	1888	1880s	---	fr	high		Goncourt
+Mirbeau_JardinSupplices.txt	Mirbeau	male	JardinSupplices	1899	1890s	---	fr	high		Goncourt
+Mirbeau_SebastienRoch.txt	Mirbeau	male	SebastienRoch	1890	1890s	---	fr	high		Goncourt
+Zola_Germinal.txt	Zola	male	Germinal	1885	1880s	blanche	fr	high	rd0058.txt	
+Zola_Nana.txt	Zola	male	Nana	1885	1880s	blanche	fr	high	rd0059.txt	
+Zola_Oeuvre.txt	Zola	male	Oeuvre	1886	1880s	blanche	fr	high	rd0060.txt	
+Aimard_BanditsArizona.txt	Aimard	male	BanditsArizona	1881	1880s	aventure	fr	low	rd0301.txt	
+Aimard_GrandChefAucas.txt	Aimard	male	GrandChefAucas	1858	1850s	aventure	fr	low	rd0309.txt	
+Aimard_TrappeursArkansas.txt	Aimard	male	TrappeursArkansas	1858	1850s	aventure	fr	low	rd0302.txt	
+FevalPP_CavalierFortune.txt	FevalPP	male	CavalierFortune	1868	1860s	aventure	fr	low	rd0605.txt	
+FevalPP_ErrantsNuit.txt	FevalPP	male	ErrantsNuit	1857	1850s	policier	fr	low	rd0607.txt	
+FevalPP_JeanDiable.txt	FevalPP	male	JeanDiable1	1862	1860s	policier	fr	low	rd0634.txt	
+Gaboriau_CrimeOrcival.txt	Gaboriau	male	CrimeOrcival	1866	1860s	policier	fr	low	rd1155.txt	
+Gaboriau_Lerouge.txt	Gaboriau	male	Lerouge	1865	1860s	policier	fr	low	rd1020.txt	
+Gaboriau_MonsieurLecoq.txt	Gaboriau	male	MonsieurLecoq	1869	1860s	policier	fr	low	rd1158.txt	
+Malot_Cara.txt	Malot	male	Cara	1878	1870s		fr	low		
+Malot_ClotildeMartory.txt	Malot	male	ClotildeMartory	1873	1870s		fr	low		
+Malot_Ghislaine.txt	Malot	male	Ghislaine	1887	1880s		fr	low		
+Ponson_Breda.txt	Ponson	male	Breda	1866	1860s	fantastique	fr	low	rd0013.txt	
+Ponson_CordePendu2.txt	Ponson	male	CordePendu2	1870	1870s	policier	fr	low	rd1164.txt	
+Ponson_RocambolePrison.txt	Ponson	male	RocambolePrison	1869	1860s	policier	fr	low	rd1168.txt	
+Stolz_DessusHaie.txt	Stolz	female	DessusHaie	1876	1870s	---	fr	low		
+Stolz_MaisonRoulante.txt	Stolz	female	MaisonRoulante	1869	1860s	---	fr	low		
+Stolz_TresorNanette.txt	Stolz	female	TresorNanette	1872	1870s	---	fr	low		
+Verne_ArchipelFeu.txt	Verne	male	ArchipelFeu	1884	1880s	blanche	fr	low	rd0081.txt	low?
+Verne_DeuxAnsVacances.txt	Verne	male	DeuxAnsVacances	1888	1880s	blanche	fr	low	rd0149.txt	low?
+Verne_VingtMilleLieues.txt	Verne	male	VingtMilleLieues	1871	1870s	blanche	fr	low	rd0178.txt	low?
