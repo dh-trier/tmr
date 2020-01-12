@@ -18,6 +18,7 @@ features.
 # Import statements
 # =================================
 
+import formats0_frq
 import formats1_tdm
 import formats2_src
 from os.path import join
@@ -28,7 +29,7 @@ from os.path import join
 # ==================================
 
 seglen = 5000 # segment length
-casing = "original" # "lower"|"original"
+casing = "lower" # "lower"|"original"
 params = {"seglen":seglen, "casing":casing}
 
 
@@ -38,6 +39,9 @@ params = {"seglen":seglen, "casing":casing}
 
 wdir = join("..")
 sourcefolder = join(wdir, "source", "tagged", "")
+
+# formats0_freqs
+frqfolder = join(wdir, "target", "frq"+"-"+casing, "")
 
 # formats1_tdm
 tdmfolder = join(wdir, "target", "tdm"+"-"+str(seglen), "")
@@ -49,5 +53,6 @@ srcfolder = join(wdir, "target", "src"+"-"+str(seglen), "")
 # Call imported scripts
 # ==================================
 
-formats1_tdm.main(sourcefolder, tdmfolder, params)
+formats0_frq.main(sourcefolder, frqfolder, params)
+#formats1_tdm.main(sourcefolder, tdmfolder, params)
 #formats2_src.main(sourcefolder, srcfolder, params)
