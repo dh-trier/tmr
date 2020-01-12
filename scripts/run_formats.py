@@ -18,9 +18,10 @@ features.
 # Import statements
 # =================================
 
-import formats0_frq
-import formats1_tdm
-import formats2_src
+import formats1_tkn
+import formats2_frq
+import formats3_tdm
+import formats4_src
 from os.path import join
 
 
@@ -30,7 +31,8 @@ from os.path import join
 
 seglen = 5000 # segment length
 casing = "lower" # "lower"|"original"
-params = {"seglen":seglen, "casing":casing}
+token = "pos" # "lemma"|"pos"
+params = {"seglen":seglen, "casing":casing, "token":token}
 
 
 # ==================================
@@ -40,19 +42,17 @@ params = {"seglen":seglen, "casing":casing}
 wdir = join("..")
 sourcefolder = join(wdir, "source", "tagged", "")
 
-# formats0_freqs
+tknfolder = join(wdir, "target", "tkn"+"-"+token, "")
 frqfolder = join(wdir, "target", "frq"+"-"+casing, "")
-
-# formats1_tdm
 tdmfolder = join(wdir, "target", "tdm"+"-"+str(seglen), "")
-
-# formats2_src
 srcfolder = join(wdir, "target", "src"+"-"+str(seglen), "")
+
 
 # ==================================
 # Call imported scripts
 # ==================================
 
-formats0_frq.main(sourcefolder, frqfolder, params)
-#formats1_tdm.main(sourcefolder, tdmfolder, params)
-#formats2_src.main(sourcefolder, srcfolder, params)
+formats1_tkn.main(sourcefolder, tknfolder, params)
+#formats2_frq.main(sourcefolder, frqfolder, params)
+#formats3_tdm.main(sourcefolder, tdmfolder, params)
+#formats4_src.main(sourcefolder, srcfolder, params)
