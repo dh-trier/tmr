@@ -18,6 +18,7 @@ features.
 # Import statements
 # =================================
 
+import formats0_tagging
 import formats1_tkn
 import formats2_frq
 import formats3_tdm
@@ -30,13 +31,14 @@ from os.path import join
 # Parameters
 # ==================================
 
+lang = "fr"
 seglen = 5000 # segment length
 casing = "lower" # "lower"|"original"
 token = "lemma" # "lemma"|"pos" ## expand to wordforms
-pos = ["NOM", "ADJ", "ADV", "VER:infi", "VER:pper", "VER:pres", "VER:simp", "VER:impf", "VER:impe"] # list of POS-tags or "all"
-#pos = ["DET:ART", "DET:POS", "PRP", "PRP:det", "PUN", "PRO:PER", "PRO:REL", "PRO:DEM", "KON"] # list of POS-tags or "all"
+#pos = ["NN0", "NN1", "NN2", "AJ0", "AV0", "VVG", "VVD", "VVN"] # list of POS-tags or "all"
+pos = ["DET:ART", "DET:POS", "PRP", "PRP:det", "PUN", "PRO:PER", "PRO:REL", "PRO:DEM", "KON"] # list of POS-tags or "all"
 #pos = "all"
-params = {"seglen":seglen, "casing":casing, "token":token, "pos":pos}
+params = {"lang":lang, "seglen":seglen, "casing":casing, "token":token, "pos":pos}
 
 
 # ==================================
@@ -44,21 +46,23 @@ params = {"seglen":seglen, "casing":casing, "token":token, "pos":pos}
 # ==================================
 
 wdir = join("..")
-sourcefolder = join(wdir, "source", "tagged", "")
+plainfolder = join(wdir, "source", lang, "plain", "")
+taggedfolder = join(wdir, "source", lang, "tagged", "")
 
-tknfolder = join(wdir, "target", "tkn"+"-"+token, "")
-frqfolder = join(wdir, "target", "frq"+"-"+casing, "")
-tdmfolder = join(wdir, "target", "tdm"+"-"+str(seglen), "")
-srcfolder = join(wdir, "target", "src"+"-"+str(seglen), "")
-ngrfolder = join(wdir, "target", "sel"+"-"+token, "")
+tknfolder = join(wdir, "target", lang, "tkn"+"-"+token, "")
+frqfolder = join(wdir, "target", lang, "frq"+"-"+casing, "")
+tdmfolder = join(wdir, "target", lang, "tdm"+"-"+str(seglen), "")
+srcfolder = join(wdir, "target", lang, "src"+"-"+str(seglen), "")
+ngrfolder = join(wdir, "target", lang, "sel"+"-"+token, "")
 
 
 # ==================================
 # Call imported scripts
 # ==================================
 
-#formats1_tkn.main(sourcefolder, tknfolder, params)
-#formats2_frq.main(sourcefolder, frqfolder, params)
-#formats3_tdm.main(sourcefolder, tdmfolder, params)
-#formats4_src.main(sourcefolder, srcfolder, params)
-formats5_sel.main(sourcefolder, ngrfolder, params)
+#formats0_tagging.main(plainfolder, taggedfolder, params)
+#formats1_tkn.main(taggedfolder, tknfolder, params)
+#formats2_frq.main(taggedfolder, frqfolder, params)
+#formats3_tdm.main(taggedfolder, tdmfolder, params)
+#formats4_src.main(taggedfolder, srcfolder, params)
+formats5_sel.main(taggedfolder, ngrfolder, params)
