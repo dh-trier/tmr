@@ -28,32 +28,35 @@ from os.path import join
 
 
 # ==================================
-# Parameters
+# Parameters (need to be set)
 # ==================================
 
-lang = "fr"
-seglen = 5000 # segment length
+lang = "de"
+coll = "eb"
+seglen = 20000 # segment length
 casing = "lower" # "lower"|"original"
-token = "lemma" # "lemma"|"pos" ## expand to wordforms
+token = "mixed" # "lemma"|"pos" ## expand to wordforms
 #pos = ["NN0", "NN1", "NN2", "AJ0", "AV0", "VVG", "VVD", "VVN"] # list of POS-tags or "all"
-pos = ["DET:ART", "DET:POS", "PRP", "PRP:det", "PUN", "PRO:PER", "PRO:REL", "PRO:DEM", "KON"] # list of POS-tags or "all"
+#pos = ["DET:ART", "DET:POS", "PRP", "PRP:det", "PUN", "PRO:PER", "PRO:REL", "PRO:DEM", "KON"] # list of POS-tags or "all"
+pos = ["NN", "NE", "ADV", "ADJA", "ADJD", "VVFIN", "VAFIN"]
 #pos = "all"
-params = {"lang":lang, "seglen":seglen, "casing":casing, "token":token, "pos":pos}
+
+params = {"lang":lang, "coll":coll, "seglen":seglen, "casing":casing, "token":token, "pos":pos}
 
 
 # ==================================
-# Files and folders
+# Files and folders (don' change)
 # ==================================
 
 wdir = join("..")
-plainfolder = join(wdir, "source", lang, "plain", "")
-taggedfolder = join(wdir, "source", lang, "tagged", "")
+plainfolder = join(wdir, "source", lang, coll, "plain", "")
+taggedfolder = join(wdir, "source", lang, coll, "tagged", "")
 
-tknfolder = join(wdir, "target", lang, "tkn"+"-"+token, "")
-frqfolder = join(wdir, "target", lang, "frq"+"-"+casing, "")
-tdmfolder = join(wdir, "target", lang, "tdm"+"-"+str(seglen), "")
-srcfolder = join(wdir, "target", lang, "src"+"-"+str(seglen), "")
-ngrfolder = join(wdir, "target", lang, "sel"+"-"+token, "")
+tknfolder = join(wdir, "target", lang, coll, "tkn"+"-"+token, "")
+frqfolder = join(wdir, "target", lang, coll, "frq"+"-"+casing, "")
+tdmfolder = join(wdir, "target", lang, coll, "tdm"+"-"+str(seglen), "")
+srcfolder = join(wdir, "target", lang, coll, "src"+"-"+str(seglen), "")
+ngrfolder = join(wdir, "target", lang, coll, "sel"+"-"+token, "")
 
 
 # ==================================
@@ -61,8 +64,8 @@ ngrfolder = join(wdir, "target", lang, "sel"+"-"+token, "")
 # ==================================
 
 #formats0_tagging.main(plainfolder, taggedfolder, params)
-#formats1_tkn.main(taggedfolder, tknfolder, params)
+formats1_tkn.main(taggedfolder, tknfolder, params)
 #formats2_frq.main(taggedfolder, frqfolder, params)
 #formats3_tdm.main(taggedfolder, tdmfolder, params)
 #formats4_src.main(taggedfolder, srcfolder, params)
-formats5_sel.main(taggedfolder, ngrfolder, params)
+#formats5_sel.main(taggedfolder, ngrfolder, params)

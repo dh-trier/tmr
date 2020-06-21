@@ -1,0 +1,39 @@
+# This file contains the words that were used for building the table
+# of frequencies. It can be also used for the next tasks, and for this
+# purpose it can be manually revised, edited, deleted, culled, etc.
+# You can either delete unwanted words, or mark them with "#"
+# -----------------------------------------------------------------------
+
+nom
+ver
+pro
+det
+prp
+pun
+per
+art
+adv
+sent
+adj
+kon
+impf
+pres
+nam
+pper
+infi
+simp
+pos
+dem
+rel
+num
+ppre
+cit
+ind
+futu
+cond
+int
+subi
+subp
+abr
+impe
+sym
