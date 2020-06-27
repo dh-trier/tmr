@@ -23,7 +23,7 @@ import formats1_tkn
 import formats2_frq
 import formats3_tdm
 import formats4_src
-import formats5_sel
+import formats5_ngr
 from os.path import join
 
 
@@ -32,16 +32,18 @@ from os.path import join
 # ==================================
 
 lang = "de"
-coll = "eb"
+coll = "fontane"
 seglen = 20000 # segment length
 casing = "lower" # "lower"|"original"
-token = "mixed" # "lemma"|"pos" ## expand to wordforms
+token = "wordform" # "lemma"|"pos" ## expand to wordforms
 #pos = ["NN0", "NN1", "NN2", "AJ0", "AV0", "VVG", "VVD", "VVN"] # list of POS-tags or "all"
 #pos = ["DET:ART", "DET:POS", "PRP", "PRP:det", "PUN", "PRO:PER", "PRO:REL", "PRO:DEM", "KON"] # list of POS-tags or "all"
 pos = ["NN", "NE", "ADV", "ADJA", "ADJD", "VVFIN", "VAFIN"]
+#pos = ["NN0", "NN1", "NN2", "VVB", "VVD", "VVG", "AJ0", "AJ1", "AJC", ] # English
 #pos = "all"
+ngram = 3
 
-params = {"lang":lang, "coll":coll, "seglen":seglen, "casing":casing, "token":token, "pos":pos}
+params = {"lang":lang, "coll":coll, "seglen":seglen, "casing":casing, "token":token, "pos":pos, "ngram":ngram}
 
 
 # ==================================
@@ -56,7 +58,7 @@ tknfolder = join(wdir, "target", lang, coll, "tkn"+"-"+token, "")
 frqfolder = join(wdir, "target", lang, coll, "frq"+"-"+casing, "")
 tdmfolder = join(wdir, "target", lang, coll, "tdm"+"-"+str(seglen), "")
 srcfolder = join(wdir, "target", lang, coll, "src"+"-"+str(seglen), "")
-ngrfolder = join(wdir, "target", lang, coll, "sel"+"-"+token, "")
+ngrfolder = join(wdir, "target", lang, coll, "ngr"+"-"+token+"-"+str(ngram), "")
 
 
 # ==================================
@@ -64,8 +66,8 @@ ngrfolder = join(wdir, "target", lang, coll, "sel"+"-"+token, "")
 # ==================================
 
 #formats0_tagging.main(plainfolder, taggedfolder, params)
-formats1_tkn.main(taggedfolder, tknfolder, params)
+#formats1_tkn.main(taggedfolder, tknfolder, params)
 #formats2_frq.main(taggedfolder, frqfolder, params)
 #formats3_tdm.main(taggedfolder, tdmfolder, params)
 #formats4_src.main(taggedfolder, srcfolder, params)
-#formats5_sel.main(taggedfolder, ngrfolder, params)
+formats5_ngr.main(taggedfolder, ngrfolder, params)
